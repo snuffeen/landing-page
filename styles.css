@@ -1,12 +1,12 @@
 * {
     outline: 2px solid red;
-}
+} 
 
 body {
     min-height: 100vh;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 10% 80% 10%;
+    grid-template-rows: 5% 90% 5%;
     grid-template-areas:
         'header'
         'main'
@@ -15,8 +15,7 @@ body {
     align-self: stretch;
     justify-content: center;
     justify-items: stretch;
-    gap: 8px;
-    margin: 4px;
+    margin: 0;
 }
 
 .header {
@@ -29,13 +28,13 @@ body {
     justify-items: center;
     align-items: center;
     place-content: start;
-    padding: 4px;
 }
 
 .header-logo {
     display: grid;
     grid-area: header-logo;
     justify-self: start;
+    margin: 0 64px;
 }
 
 .header-links{
@@ -44,26 +43,90 @@ body {
     grid-template-areas: 
     'link-one link-two link-three';
     justify-self: end;
-    gap: 8px;
+    margin: 0 64px;
 }
 
 .main {
     display: grid;
     grid-area: main;
     grid-template-areas:
-        'first-block'
+        'hero'
         'second-block'
         'third-block'
         'fourth-block';
     grid-template-rows:
     repeat(4, 1fr);
-    align-items: center;
-    justify-content: center;
 }
 
-.first-block {
+.hero {
     display: grid;
-    grid-area: first-block;
+    grid-area: hero;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+        'hero-left hero-right';
+    justify-items: center;
+    align-items: center;
+}
+
+.hero-left {
+    display: grid;
+    grid-area: hero-left;
+    grid-template-rows: 1fr 1fr;
+    margin: 0 64px;
+}
+
+.hero-left-bold {
+    font-size: 36px;
+    font-weight: 800;
+    color: #f9faf8;
+}
+
+.hero-left-sub, .header-links {
+    font-size: 18px;
+    color: #e5e7eb;
+}
+
+.hero-right {
+    display: grid;
+    grid-area: hero-right;
+    margin: 0 64px;
+}
+
+.second-block {
+    display: grid;
+    grid-area: second-block;
+    align-items: start;
+    justify-items: center;
+    padding: 16px;
+    font-size: 36px;
+    font-weight: bolder;
+    color: #1f2937;
+}
+
+.pictures-and-sub-text {
+    display: grid;
+    grid-template-columns: 
+    repeat(4, 1fr);
+}
+
+.inspirational-quote {
+    display: grid;
+    grid-area: third-block;
+    justify-items: center;
+    align-items: center;
+}
+
+.call-to-action {
+    display: grid;
+    grid-area: fourth-block;
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas: 
+        'call-to-action-text call-to-action-button';
+    background-color: #3882f6;
+    margin: 96px;
+    align-items: center;
+    justify-items: center;
 }
 
 .footer {
@@ -74,4 +137,8 @@ body {
     justify-items: center;
     align-items: center;
     font-size: 48px;
+}
+
+.header, .hero {
+    background-color: #1f2937;
 }
