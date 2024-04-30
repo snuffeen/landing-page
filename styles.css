@@ -136,6 +136,7 @@ body {
 .quote {
     display: grid;
     margin: 0 128px;
+    padding: 64px;
 }
 
 .quotee {
@@ -143,21 +144,42 @@ body {
     font-size: 24px;
     font-weight: 900;
     justify-self: end;
-    align-self: baseline;
-    margin: 0 128px;
+    margin: 16px 128px;
 }
 
 .call-to-action {
     display: grid;
     grid-area: call-to-action;
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 60% 40%;
     grid-template-areas: 
         'call-to-action-text call-to-action-button';
+    border-radius: 15px;
     background-color: #3882f6;
-    margin: 96px;
+    margin: 128px;
+    align-self: center;
+    justify-self: center;
     align-items: center;
     justify-items: center;
+    min-height: 20vh;
+    min-width: 60vh;
 }
+
+.call-to-action button {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    border-radius: 9px;
+    font-size: 16px;
+    background-color: #3882f6;
+    border: 2px solid white;
+    color: white;
+    padding: 10px 24px;
+    text-align: center;
+    text-decoration: none;
+    opacity: 0.7;
+}
+
+.call-to-action button:hover {opacity: 1}
 
 .footer {
     display: grid;
