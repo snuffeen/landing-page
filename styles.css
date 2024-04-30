@@ -1,6 +1,6 @@
-* {
+/* * {
     outline: 2px solid red;
-} 
+}  */
 
 body {
     min-height: 100vh;
@@ -34,7 +34,9 @@ body {
     display: grid;
     grid-area: header-logo;
     justify-self: start;
-    margin: 0 64px;
+    margin: 0 128px;
+    font-size: 24px;
+    color: #f9faf8;
 }
 
 .header-links{
@@ -43,7 +45,14 @@ body {
     grid-template-areas: 
     'link-one link-two link-three';
     justify-self: end;
-    margin: 0 64px;
+    margin: 0 128px;
+    gap: 12px;
+}
+
+.header-links a {
+    text-decoration: none;
+    color: #e5e7eb;
+    font-size: 18px;
 }
 
 .main {
@@ -52,8 +61,8 @@ body {
     grid-template-areas:
         'hero'
         'second-block'
-        'third-block'
-        'fourth-block';
+        'inspirational-quote'
+        'call-to-action';
     grid-template-rows:
     repeat(4, 1fr);
 }
@@ -73,7 +82,8 @@ body {
     display: grid;
     grid-area: hero-left;
     grid-template-rows: 1fr 1fr;
-    margin: 0 64px;
+    margin: 0 128px;
+    justify-items: start;
 }
 
 .hero-left-bold {
@@ -90,7 +100,8 @@ body {
 .hero-right {
     display: grid;
     grid-area: hero-right;
-    margin: 0 64px;
+    margin: 0 128px;
+    background-color: #e5e7eb;
 }
 
 .second-block {
@@ -108,18 +119,37 @@ body {
     display: grid;
     grid-template-columns: 
     repeat(4, 1fr);
+    margin: 0 128px;
 }
 
 .inspirational-quote {
     display: grid;
-    grid-area: third-block;
+    grid-area: inspirational-quote;
     justify-items: center;
     align-items: center;
+    font-style: italic;
+    color: #1f2937;
+    font-size: 36px;
+    background-color: #e5e7eb;
+}
+
+.quote {
+    display: grid;
+    margin: 0 128px;
+}
+
+.quotee {
+    display: grid;
+    font-size: 24px;
+    font-weight: 900;
+    justify-self: end;
+    align-self: baseline;
+    margin: 0 128px;
 }
 
 .call-to-action {
     display: grid;
-    grid-area: fourth-block;
+    grid-area: call-to-action;
     grid-template-columns: 3fr 1fr;
     grid-template-areas: 
         'call-to-action-text call-to-action-button';
@@ -137,6 +167,8 @@ body {
     justify-items: center;
     align-items: center;
     font-size: 48px;
+    background-color: #1f2937;
+    color: #f9faf8;
 }
 
 .header, .hero {
